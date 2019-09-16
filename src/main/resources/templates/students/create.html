@@ -1,0 +1,60 @@
+<div th:replace="/shared/header"></div>
+<div class="col-md-12">
+    <!-- general form elements -->
+    <div class="box box-primary">
+        <div class="box-header with-border">
+            <h3 class="box-title"></h3>
+        </div>
+        <!-- /.box-header -->
+        <!-- form start -->
+        <form role="form" method="post" action="/students">
+            <div class="box-body">
+                <div class="form-group">
+                    <label>Name </label>
+                    <input type="text" name="name" class="form-control" required=""  >
+                </div>
+                <div class="form-group">
+                    <label>Phone </label>
+                    <input type="text" name="phone" class="form-control" required="" >
+                </div>
+                <div class="form-group">
+                    <label>Address </label>
+                    <input type="text" name="address" class="form-control" required="" >
+                </div>
+                <div class="form-group">
+                    <label>Roll </label>
+                    <input type="text" name="rolno" class="form-control" required="" >
+                </div>
+                <label>Grade </label>
+               <select name="grade" class="form-control" required>
+                          
+                          <option value="0">Select level</option>
+                          <option value="XI">XI</option>
+                          <option value="XII">XII</option>
+                      </select>  
+                <label>Gender </label>
+                <select name="gender" class="form-control" required>
+                          
+                          <option value="0">Select gender</option>
+                          <option value="Male">Male</option>
+                          <option value="Female">Female</option>
+                      </select>    
+
+
+
+
+                <!-- /.box-body -->
+
+                <div class="box-footer">
+
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <a href="/students"
+                       <button  class="btn btn-flat">Back</button>
+
+                    </a>
+
+                </div>
+        </form>
+    </div>
+</div>
+<div th:replace="/shared/footer"></div>

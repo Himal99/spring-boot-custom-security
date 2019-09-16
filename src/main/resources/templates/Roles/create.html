@@ -1,0 +1,38 @@
+<div th:replace="/shared/header"></div>
+<div class="col-md-12">
+          <!-- general form elements -->
+          <div class="box box-primary">
+            <div class="box-header with-border">
+              <h3 class="box-title"></h3>
+            </div>
+            <!-- /.box-header -->
+            <!-- form start -->
+            <form role="form" method="post" action="/roles">
+              <div class="box-body">
+                <div class="form-group">
+                  <label>Subject </label>
+                  <input type="text" name="subject" class="form-control" >
+                </div>
+                  <div class="box-body">
+                <div class="form-group">
+                  <label>Roles </label>
+                  <input type="text" name="roles" class="form-control" >
+                </div>
+               
+                
+                <div class="checkbox">
+                  <label>
+                      <input type="checkbox" name="status"> Active 
+                  </label>
+                </div>
+              </div>
+              <!-- /.box-body -->
+
+              <div class="box-footer">
+                  <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}"/>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </div>
+            </form>
+          </div>
+</div>
+<div th:replace="/shared/footer"></div>
